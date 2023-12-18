@@ -1,0 +1,7 @@
+{
+  "name": "gumidiszkont-uj",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
