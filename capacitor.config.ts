@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'gumidiszkont-uj',
+  appId: 'hu.gumidiszkont.app',
+  appName: 'Gumidiszkont Miskolc',
   webDir: 'dist',
   server: {
     androidScheme: 'https'
