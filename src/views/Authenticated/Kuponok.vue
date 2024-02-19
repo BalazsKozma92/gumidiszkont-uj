@@ -64,7 +64,6 @@
     IonPage,
     IonList,
     IonItem,
-    IonLabel,
     IonAccordion,
     IonAccordionGroup,
     IonSpinner,

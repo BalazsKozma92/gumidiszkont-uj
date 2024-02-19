@@ -68,7 +68,7 @@ import {
   thermometerOutline,
   settingsOutline,
   pricetagsOutline,
-  calendarNumberOutline,
+  // calendarNumberOutline,
   mapOutline,
   helpOutline,
   layersOutline,
@@ -103,14 +103,19 @@ const appPages = [
     icon: desktopOutline,
   },
   {
-    title: 'Gumiszerviz',
-    url: '/tyre-service',
+    title: 'Gumiabroncs értékesítés',
+    url: '/tyre',
     icon: apertureOutline,
   },
   {
-    title: 'Autószerviz',
-    url: '/car-service',
-    icon: carOutline,
+    title: 'Felni értékesítés',
+    url: '/rim',
+    icon: cogOutline,
+  },
+  {
+    title: 'Gumiszerviz',
+    url: '/tyre-service',
+    icon: apertureOutline,
   },
   {
     title: 'Felnijavítás',
@@ -118,9 +123,9 @@ const appPages = [
     icon: cogOutline,
   },
   {
-    title: 'Klímatisztítás, javítás',
-    url: '/air-conditioner-repair',
-    icon: thermometerOutline,
+    title: 'Autószerviz',
+    url: '/car-service',
+    icon: carOutline,
   },
   {
     title: 'Futómű állítás',
@@ -128,15 +133,20 @@ const appPages = [
     icon: settingsOutline,
   },
   {
+    title: 'Klímatisztítás, javítás',
+    url: '/air-conditioner-repair',
+    icon: thermometerOutline,
+  },
+  {
     title: 'Kuponok',
     url: '/coupons',
     icon: pricetagsOutline,
   },
-  {
-    title: 'Időpontfoglalás',
-    url: '/appointment',
-    icon: calendarNumberOutline,
-  },
+  // {
+  //   title: 'Időpontfoglalás',
+  //   url: '/appointment',
+  //   icon: calendarNumberOutline,
+  // },
   {
     title: 'Térkép',
     url: '/map',

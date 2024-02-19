@@ -97,6 +97,8 @@ ion-item, .verify-btn {
   const verified = ref(false)
   const isLoading = ref(false)
   const errorMsg = ref('')
+  const couponsIds = ref([])
+  const myId = ref(-1)
 
   function goToLoginPage() {
     errorMsg.value = ''
@@ -109,9 +111,11 @@ ion-item, .verify-btn {
     isLoading.value = true;
 
     axios.get(`https://admin.autoszervizmiskolc.hu/api/email-verification/${verificationCode.value}`)
-      .then(() => {
+      .then((response) => {
+        myId.value = response.data.user_id
         errorMsg.value = ''
         verified.value = true;
+        generateCoupons();
       })
       .catch((error: any) => {
         if (error.response.status === 500) {
@@ -125,7 +129,28 @@ ion-item, .verify-btn {
       });
   }
 
+  function generateCoupons() {
+    couponsIds.value.forEach(couponId => {
+      axios.post('https://admin.autoszervizmiskolc.hu/api/coupons/users/generate/' + couponId, {
+        user_id: myId.value
+      })
+      .then(() => {
+      })
+      .catch((error: any) => {
+      })
+    });
+}
+
+  function getCouponTypes() {
+    axios.get('https://admin.autoszervizmiskolc.hu/api/coupon-type-ids')
+      .then(response => {
+        couponsIds.value = response.data.coupon_type_ids;
+      })
+      .catch(() => {})
+  }
+
   onMounted(() => {
+    getCouponTypes()
     if (route.params.token !== 'notoken') {
       verificationCode.value = String(route.params.token);
       verify();

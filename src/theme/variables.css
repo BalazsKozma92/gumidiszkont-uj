@@ -517,8 +517,52 @@ ion-toolbar {
   justify-content: center;
 }
 
+.font-bold {
+  font-weight: bold;
+}
+
+.text-red {
+  color: red !important;
+}
+
 .items-center {
   align-items: center;
+}
+
+.tyreRimValue {
+  color: rgb(251, 50, 50);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tyre-rim-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.rim-tyre-value {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.single-rim-tyre {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, .05);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.rim-tyre-image {
+  height: 180px;
+  object-fit: contain;
+}
+
+.tyre-description {
+  text-align: justify;
 }
 
 .flex-middle {

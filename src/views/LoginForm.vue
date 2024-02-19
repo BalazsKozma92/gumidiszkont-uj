@@ -124,7 +124,7 @@ ion-item, .login-btn {
     };
 
     axios.post(`https://admin.autoszervizmiskolc.hu/api/login`, userData)
-      .then((response : any) => {
+      .then((response: any) => {
         errorMsg.value = ''
 
         const currentTime = new Date().getTime();

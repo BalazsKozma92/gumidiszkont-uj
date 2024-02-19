@@ -29,22 +29,34 @@
           <div
             v-for="(singleNews, key) in news" :key="key"
           >
-            <div class="news">
-              <div
-                class="tiptap"
-              >
-                <span class="news-title">{{ singleNews.title }}</span>
-                <span
-                  v-html="singleNews.content"
+            <div
+              v-if="currentIndex >= key"
+            >
+              <div class="news">
+                <div
+                  class="tiptap"
                 >
-                </span>
+                  <span class="news-title">{{ singleNews.title }}</span>
+                  <span
+                    v-html="singleNews.content"
+                  >
+                  </span>
+                </div>
+              </div>
+              <div 
+                v-if="(key !== news.length - 1) && key < currentIndex"
+                class="hr"
+              >
               </div>
             </div>
-            <div 
-              v-if="key !== news.length - 1"
-              class="hr"
-            >
-            </div>
+          </div>
+          <div 
+            v-if="currentIndex !== news.length - 1"
+            class="buttonWrap"
+          >
+            <button @click="loadNextArticle()" class="nextArticle">
+              Következő hír
+            </button>
           </div>
         </div>
       </div>
@@ -77,6 +89,7 @@
   import '@ionic/vue/css/ionic-swiper.css';
 
   const news = ref([])
+  const currentIndex = ref(0);
   const isLoading = ref(false)
   const carouselImages = ref([])
   const modules = ref([ Autoplay ])
@@ -95,6 +108,12 @@
         isLoading.value = false
       });
   }
+
+  const loadNextArticle = () => {
+    if (currentIndex.value < news.value.length - 1) {
+      currentIndex.value++;
+    }
+  };
 
   function getNews() {
     isLoading.value = true
@@ -118,4 +137,17 @@
 </script>
 
 <style scoped>
+.nextArticle {
+  padding: 10px;
+  background-color: red;
+  border-radius: 6px;
+  color: white;
+  font-size: 18px;
+  margin: auto;
+}
+
+.buttonWrap {
+  width: fit-content;
+  margin: auto;
+}
 </style>

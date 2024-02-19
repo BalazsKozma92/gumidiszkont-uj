@@ -14,11 +14,11 @@
             Gumiszerviz
           </h2>
           <div>
-            A régió egyik legnagyobb autógumi raktárkészletével rendelkezünk, az olcsó (low budget) abroncsoktól a prémium abroncsokig mindent megtalálsz nálunk!
+            Nálunk nincs időpont foglalás, érkezési sorrendben dolgozunk!
           </div>
           <br>
           <div>
-            Munkatársaink az alábbi telefonszámokon várják hívásod:
+            4 szervizálláson tapasztalt kollégáink a legkorszerűbb gépekkel javítják, szerelik az abroncsokat, így biztos lehetsz abban, hogy autód a legjobb kezekben van!
           </div>
         </div>
         <div

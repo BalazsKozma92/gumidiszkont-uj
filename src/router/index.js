@@ -17,6 +17,16 @@ const routes = [
         meta: { requiresAuth: true }
       },
       {
+        path: '/tyre',
+        component: () => import ('../views/Authenticated/Gumiabroncs.vue'),
+        meta: { requiresAuth: true }
+      },
+      {
+        path: '/rim',
+        component: () => import ('../views/Authenticated/Felni.vue'),
+        meta: { requiresAuth: true }
+      },
+      {
         path: '/tyre-service',
         component: () => import ('../views/Authenticated/Gumiszerviz.vue'),
         meta: { requiresAuth: true }
@@ -46,11 +56,11 @@ const routes = [
         component: () => import ('../views/Authenticated/Kuponok.vue'),
         meta: { requiresAuth: true }
       },
-      {
-        path: '/appointment',
-        component: () => import ('../views/Authenticated/Idopontfoglalas.vue'),
-        meta: { requiresAuth: true }
-      },
+      // {
+      //   path: '/appointment',
+      //   component: () => import ('../views/Authenticated/Idopontfoglalas.vue'),
+      //   meta: { requiresAuth: true }
+      // },
       {
         path: '/map',
         component: () => import ('../views/Authenticated/Terkep.vue'),

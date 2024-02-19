@@ -35,6 +35,11 @@
             <div class="phone-help">
               <a href="tel:+3646413756">+36/46 413-756</a>
             </div>
+            <br>
+            <div>
+              Címünk:
+            </div>
+            <div class="font-bold">3527 Miskolc, József Attila u. 51.</div>
           </div>
           <div class="margin-45">
             Üzennél nekünk? Írd meg kérdésed, észrevételed.
